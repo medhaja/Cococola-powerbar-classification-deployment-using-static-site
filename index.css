@@ -1,5 +1,5 @@
 .app_container {
-  width: 500px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,4 +50,8 @@ h3 {
   font-weight: bold;
   font-style: italic;
   font-size: 30px;
+}
+
+.stream{
+  margin: 15px;
 }
