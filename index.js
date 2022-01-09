@@ -90,4 +90,5 @@ var player = document.getElementById("player");
 
 
         img.dispose();
+        webcam.dispose();
       });
