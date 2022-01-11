@@ -1,3 +1,5 @@
+window.alert("Hello,\nThis is Clint side deployment, So the model is first downloaded to your broswer and then Inferred. Your data never leaves your machine. So no need to worry about your privacy.\nPlease click on allow when you are asked to use the camera.\n Thanks");
+
 var player = document.getElementById("player");
       var captureButton = document.getElementById("capture");
       var stopButton = document.getElementById("stop");
@@ -18,11 +20,9 @@ var player = document.getElementById("player");
       });
       captureButton.addEventListener("click", async function () {
         // Load the model.
-        // net = await mobilenet.load();
-        const ASSETS_URL = `https://github.com/medhaja/test2/blob/main`
-        const WEIGHTS_URL = `${ASSETS_URL}/Weights/model.json`
         net = await tf.loadLayersModel('https://raw.githubusercontent.com/medhaja/test2/main/Weights/model.json');
         console.log('Model loaded!!');
+
 
 
         // Create an object from Tensorflow.js data API which could capture image
@@ -63,30 +63,17 @@ var player = document.getElementById("player");
         let labelName = ['coco cola', 'power bar']
         let resultLabel = `${labelName[index]}`;
         console.log(resultLabel);
-        // display in the html
         document.getElementById('console').innerHTML = resultLabel;
-        // add bold test to the label
         document.getElementById('console').style.fontWeight = 'bold';
-        // add color to the label
         document.getElementById('console').style.color = 'red';
-        // add padding to the label
         document.getElementById('console').style.padding = '10px';
-        // add margin to the label
         document.getElementById('console').style.margin = '10px';
-        // add font size to the label
         document.getElementById('console').style.fontSize = '20px';
-        // add font family to the label
         document.getElementById('console').style.fontFamily = 'Arial';
-        // add font weight to the label
         document.getElementById('console').style.fontWeight = 'bold';
-        // add text align to the label
         document.getElementById('console').style.textAlign = 'center';
-        // add text transform to the label
         document.getElementById('console').style.textTransform = 'uppercase';
-        // add text shadow to the label
         document.getElementById('console').style.textShadow = '1px 1px 1px yellow';
-
-        //  var x = document.getElementById("myLabel"); 
 
 
         img.dispose();
