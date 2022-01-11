@@ -1,4 +1,4 @@
-window.alert("Hello,\nThis is Clint side deployment, So the model is first downloaded to your broswer and then Inferred. Your data never leaves your machine. So no need to worry about your privacy.\nPlease click on allow when you are asked to use the camera.\n Thanks");
+window.alert("Just a heads up! We'll ask to access your webcam so that we can detect objects in semi-real-time.\n\nDon\'t worry, we aren\'t sending any of your images to a remote server, all the ML is being done locally on device, and you can check out our source code on Github.");
 
 var player = document.getElementById("player");
       var captureButton = document.getElementById("capture");
